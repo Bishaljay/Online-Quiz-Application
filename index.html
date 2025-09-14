@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>📚 Online Quiz Application</h1>
+
+    <!-- Settings Section -->
+    <div class="settings">
+      <label>Timer (seconds):
+        <input id="timerInput" type="number" min="5" max="120" value="20">
+      </label>
+
+      <label>Choose Section:
+        <select id="sectionSelect">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="cloud">Cloud</option>
+          <option value="ds">Data Structures</option>
+          <option value="bigdata">Big Data Analytics</option>
+          <option value="ml">Machine Learning</option>
+        </select>
+      </label>
+
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="quiz hidden">
+      <div id="question" class="question-box"></div>
+      <div id="choices" class="choices"></div>
+      <div class="timer">⏱ Time Left: <span id="time"></span></div>
+      <button id="nextBtn" class="btn hidden">Next</button>
+    </div>
+
+  </div>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
